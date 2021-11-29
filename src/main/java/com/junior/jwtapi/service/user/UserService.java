@@ -1,4 +1,4 @@
-package com.junior.jwtapi.service;
+package com.junior.jwtapi.service.user;
 
 import com.junior.jwtapi.domain.Role;
 import com.junior.jwtapi.domain.User;

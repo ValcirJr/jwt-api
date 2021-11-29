@@ -1,8 +1,10 @@
 package com.junior.jwtapi;
 
-import com.junior.jwtapi.domain.Role;
-import com.junior.jwtapi.domain.User;
-import com.junior.jwtapi.service.UserService;
+import com.junior.jwtapi.domain.*;
+import com.junior.jwtapi.service.author.AuthorService;
+import com.junior.jwtapi.service.book.BookService;
+import com.junior.jwtapi.service.publisher.PublisherService;
+import com.junior.jwtapi.service.user.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
+
+import static com.junior.jwtapi.domain.CoverType.*;
 
 @SpringBootApplication
 public class JwtApiApplication {
@@ -44,6 +48,6 @@ public class JwtApiApplication {
           userService.addRoleToUser("tobey", "ROLE_SUPER_ADMIN");
           userService.addRoleToUser("andrew", "ROLE_USER");
           userService.addRoleToUser("andrew", "ROLE_MANAGER");
-        };
+          };
     }
 }

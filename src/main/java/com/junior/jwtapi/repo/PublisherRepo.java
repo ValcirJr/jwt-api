@@ -1,4 +1,9 @@
 package com.junior.jwtapi.repo;
 
-public class PublisherRepo {
+import com.junior.jwtapi.domain.Publisher;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PublisherRepo extends JpaRepository<Publisher, Long> {
 }
